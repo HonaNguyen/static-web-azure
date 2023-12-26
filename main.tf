@@ -30,12 +30,12 @@ resource "azurerm_storage_account" "honastatic" {
     }
 }
 
-resource "azurerm_storage_container" "web" {
-    name = "web"
-    storage_account_name = azurerm_storage_account.honastatic.name
-    container_access_type = "private"
+# resource "azurerm_storage_container" "web" {
+#     name = "web"
+#     storage_account_name = azurerm_storage_account.honastatic.name
+#     container_access_type = "private"
 
-}
+# }
 
 resource "azurerm_storage_blob" "index" {
     name = "index.html"

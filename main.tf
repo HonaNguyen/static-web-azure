@@ -44,6 +44,7 @@ resource "azurerm_storage_blob" "index" {
     # storage_container_name = azurerm_storage_container.web.name
     storage_container_name = "$web"
     source = "src/index.html"
+    content_type = "text/html"
 }
 
 resource "azurerm_storage_blob" "error" {
@@ -53,7 +54,7 @@ resource "azurerm_storage_blob" "error" {
     # storage_container_name = azurerm_storage_container.web.name
     storage_container_name = "$web"
     source = "src/404.html"
+    content_type = "text/html"
+    
 }
-
-
 
